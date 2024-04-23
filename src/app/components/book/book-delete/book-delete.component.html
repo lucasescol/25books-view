@@ -1,0 +1,39 @@
+<section>
+    <div class="card">
+        <h3 class="title">Delete Book</h3>
+        <form>
+            <div class="input">
+                <div class="txt">ID</div>
+                <input disabled [(ngModel)]="book.id" name="id">
+            </div>
+            <div class="input">
+                <div class="txt">Title</div>
+                <input disabled [(ngModel)]="book.title" name="title">
+            </div>
+            <div class="input">
+                <div class="txt">Author</div>
+                <input disabled [(ngModel)]="book.author" name="author">
+            </div>
+            <div class="input">
+                <div class="txt">Company</div>
+                <input disabled [(ngModel)]="book.company" name="company">
+            </div>
+            <div class="input">
+                <div class="txt">Release</div>
+                <input disabled [(ngModel)]="book.release" name="release">
+            </div>
+            <div class="input">
+                <div class="txt">Type</div>
+                <input disabled [(ngModel)]="book.isEbook" name="isEbook">
+            </div>
+            <div class="input">
+                <div class="txt">Local</div>
+                <input disabled [(ngModel)]="book.location" name="location">
+            </div>
+        </form>
+        <div class="buttons">
+            <button (click)="deleteBook()">Delete</button>
+            <button id="btnCancel" (click)="cancel()">Cancel</button>
+        </div>
+    </div>
+</section>

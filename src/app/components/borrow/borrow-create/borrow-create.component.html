@@ -1,0 +1,28 @@
+<section>
+    <div class="card">
+        <h3 class="title">New Borrow</h3>
+        <form>
+            <div class="select">
+                <label for="user">User</label>
+                <select name="user" id="user" ngModel>
+                    <option value="" disabled>Choose a user</option>
+                    <option *ngFor="let user of users" value="{{user?.id}}">{{user?.name}}</option>
+                </select>
+                <div class="select_arrow"></div>
+            </div>
+            <div class="select">
+                <label for="book">Book</label>
+                <select name="book" id="book" ngModel>
+                    <option value="" disabled>Choose a book</option>
+                    <option *ngFor="let book of books" value="{{book?.id}}">{{book?.title}}</option>
+                </select>
+                <div class="select_arrow"></div>
+            </div>
+
+        </form>
+        <div class="buttons">
+            <button (click)="newBorrow()">Borrow</button>
+            <button id="btnCancel" (click)="cancel()">Cancel</button>
+        </div>
+    </div>
+</section>

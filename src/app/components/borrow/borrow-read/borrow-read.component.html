@@ -1,0 +1,29 @@
+<section>
+    <header>
+        <h1>Borrowing List</h1>
+    </header>
+
+    <table class="darkTable">
+        <thead>
+            <tr>
+                <th>Book ID</th>
+                <th>Title</th>
+                <th>User</th>
+                <th>User ID</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let borrow of borrows">
+                <td>{{ borrow?.bookId }}</td>
+                <td>{{ borrow?.book }}</td>
+                <td>{{ borrow?.user }}</td>
+                <td>{{ borrow?.userId }}</td>
+                <td id="act">
+                    <a routerLink="/borrow/delete/{{borrow.bookId}}"><img id="remove" src="../../../../assets/trash-bold.svg"
+                            alt=""></a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>

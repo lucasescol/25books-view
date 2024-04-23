@@ -1,0 +1,50 @@
+section {
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 5px;
+
+    width: 50vw;
+    margin-bottom: 25px;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+#book {
+    background-color: #000000;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    padding: 15px 20px;
+    width: 40vw;
+    max-width: 40vw;
+    text-decoration: none;
+}
+
+#book:hover {
+    cursor: pointer;
+    background-color: #000000d5;
+}
+
+#book:active {
+    position: relative;
+    top: 1px;
+}

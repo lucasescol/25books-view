@@ -1,0 +1,50 @@
+<section>
+
+    <header>
+        <h1>Book List</h1>
+        <aside>
+            <div>
+                <input (input)="onSearchChange($any($event.target).value)" placeholder="Search" id="input" type="text">
+                <img (click)="searchBooks()" src="../../../assets/magnifying-glass-bold.svg" alt="search">
+            </div>
+            <form>
+                <input type="radio" id="title" name="searchType" value="title">
+                <label for="title">By Title</label><br>
+                <input type="radio" id="author" name="searchType" value="author">
+                <label for="author">By Author</label><br>
+            </form>
+        </aside>
+    </header>
+
+    <table class="darkTable">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Release</th>
+                <th>Company</th>
+                <th>Type</th>
+                <th>Local</th>
+                <th>Borrowed</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let book of books">
+                <td>{{ book?.title }}</td>
+                <td>{{ book?.author }}</td>
+                <td style="text-align: center;">{{ book?.release }}</td>
+                <td>{{ book?.company }}</td>
+                <td>{{ book?.isEbook }}</td>
+                <td>{{ book?.location }}</td>
+                <td style="text-align: center;">{{ book?.borrowed }}</td>
+                <td id="act">
+                    <a routerLink="/book/edit/{{book.id}}"><img id="edit" src="../../../../assets/pencil.svg"
+                            alt=""></a>
+                    <a routerLink="/book/delete/{{book.id}}"><img id="remove" src="../../../../assets/trash-bold.svg"
+                            alt=""></a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>

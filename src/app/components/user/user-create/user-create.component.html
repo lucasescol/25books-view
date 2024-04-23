@@ -1,0 +1,27 @@
+<section>
+    <div class="card">
+        <h3 class="title">New User</h3>
+        <form>
+            <div class="input">
+                <div class="txt">Name</div>
+                <input [(ngModel)]="user.name" name="name">
+            </div>
+            <div class="input">
+                <div class="txt">Email</div>
+                <input [(ngModel)]="user.email" name="email">
+            </div>
+            <div class="input">
+                <div class="txt">Telephone</div>
+                <input [(ngModel)]="user.telephone" name="telephone">
+            </div>
+            <div class="input">
+                <div class="txt">CPF</div>
+                <input [(ngModel)]="user.cpf" name="cpf">
+            </div>
+        </form>
+        <div class="buttons">
+            <button (click)="newUser()">Save</button>
+            <button id="btnCancel" (click)="cancel()">Cancel</button>
+        </div>
+    </div>
+</section>

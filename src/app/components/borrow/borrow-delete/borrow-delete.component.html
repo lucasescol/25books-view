@@ -1,0 +1,27 @@
+<section>
+    <div class="card">
+        <h3 class="title">Delete Borrow</h3>
+        <form>
+            <div class="input">
+                <div class="txt">Book ID</div>
+                <input disabled [(ngModel)]="borrow.bookId" name="bookId">
+            </div>
+            <div class="input">
+                <div class="txt">Title</div>
+                <input disabled [(ngModel)]="borrow.book" name="book">
+            </div>
+            <div class="input">
+                <div class="txt">User ID</div>
+                <input disabled [(ngModel)]="borrow.userId" name="userId">
+            </div>
+            <div class="input">
+                <div class="txt">User</div>
+                <input disabled [(ngModel)]="borrow.user" name="user">
+            </div>
+        </form>
+        <div class="buttons">
+            <button (click)="deleteBorrow()">Delete</button>
+            <button id="btnCancel" (click)="cancel()">Cancel</button>
+        </div>
+    </div>
+</section>

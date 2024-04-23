@@ -1,0 +1,31 @@
+<section>
+    <div class="card">
+        <h3 class="title">Delete User</h3>
+        <form>
+            <div class="input">
+                <div class="txt">ID</div>
+                <input disabled [(ngModel)]="user.id" name="id">
+            </div>
+            <div class="input">
+                <div class="txt">Name</div>
+                <input disabled [(ngModel)]="user.name" name="name">
+            </div>
+            <div class="input">
+                <div class="txt">Email</div>
+                <input disabled [(ngModel)]="user.email" name="email">
+            </div>
+            <div class="input">
+                <div class="txt">Telephone</div>
+                <input disabled [(ngModel)]="user.telephone" name="telephone">
+            </div>
+            <div class="input">
+                <div class="txt">CPF</div>
+                <input disabled [(ngModel)]="user.cpf" name="cpf">
+            </div>
+        </form>
+        <div class="buttons">
+            <button (click)="deleteUser()">Delete</button>
+            <button id="btnCancel" (click)="cancel()">Cancel</button>
+        </div>
+    </div>
+</section>

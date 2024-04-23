@@ -1,0 +1,31 @@
+<section>
+    <header>
+        <h1>User List</h1>
+    </header>
+
+    <table class="darkTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Telephone</th>
+                <th>CPF</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users">
+                <td>{{ user?.name }}</td>
+                <td>{{ user?.email }}</td>
+                <td>{{ user?.telephone }}</td>
+                <td>{{ user?.cpf }}</td>
+                <td id="act">
+                    <a routerLink="/user/edit/{{user.id}}"><img id="edit" src="../../../../assets/pencil.svg"
+                            alt=""></a>
+                    <a routerLink="/user/delete/{{user.id}}"><img id="remove" src="../../../../assets/trash-bold.svg"
+                            alt=""></a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>

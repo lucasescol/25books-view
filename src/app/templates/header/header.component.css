@@ -1,0 +1,15 @@
+header{
+    background-color: #1e1e1f;
+    padding: 12px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    color: #EEEEEE;
+    font-size: 32px;
+    cursor: pointer;
+}
